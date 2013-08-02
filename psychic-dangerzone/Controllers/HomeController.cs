@@ -64,7 +64,7 @@ namespace psychic_dangerzone.Controllers
             }
 
             if (responseString == "")
-                responseString = "Get bent! Hit me back when you have something interesting to say...";
+                responseString = "Get bent! Hit me back when you have something interesting to say..." + Environment.NewLine;
 
             Response.Write(Environment.NewLine + responseString);
             return new HttpStatusCodeResult(200);
