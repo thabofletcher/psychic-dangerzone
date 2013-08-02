@@ -16,8 +16,7 @@
 }
 
 #results-wrapper {
-    background-color: rgba(50, 50, 50, .5);
-    padding: 0 0 50px 0;
+    background-color: #FF761A;
     margin-bottom: 100px;
     width: 323px;
     color: #eee;
@@ -25,10 +24,12 @@
 }
 
 #results-wrapper #results-header {
-    background-color: rgba(10, 10, 10, .5);
+    background-color: #E65C00;
     padding: 25px 0;
     border-radius: 10px 10px 0 0;
 }
 
-#results-wrapper #results-wrapper {
+#results-wrapper #results {
+    padding: 25px 0;
+
 }
