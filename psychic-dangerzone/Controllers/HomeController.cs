@@ -14,6 +14,19 @@ namespace psychic_dangerzone.Controllers
         const string WA_KEY = "4UEVYA-QPE4K4LUKG";
         const string REQUIRED = "id='Result'";
         const string START_TOKEN = "<plaintext>";
+
+        List<string> DefaultResponses = new List<string>
+        {
+            "Why don't you ask a good question?!",
+            "You suck!",
+            "I think this one has had too much to drink!",
+            "JFDI",
+            "Seriously?",
+            "Yeaaaah, I'm gonna have to get back to you on that one",
+            "Buffer overrun",
+            "42"
+        };
+
         public ActionResult Index()
         {
             return View();
@@ -64,7 +77,11 @@ namespace psychic_dangerzone.Controllers
             }
 
             if (responseString == "")
-                responseString = "Get bent! Hit me back when you have something interesting to say..." + Environment.NewLine;
+            {
+                var random = new Random((int)DateTime.Now.ToFileTime());
+                var index = random.Next(0, DefaultResponses.Count - 1);
+                responseString = DefaultResponses[index] + Environment.NewLine;
+            }
 
             Response.Write(Environment.NewLine + responseString);
             return new HttpStatusCodeResult(200);
