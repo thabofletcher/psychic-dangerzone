@@ -6,3 +6,15 @@
     margin-top: 20px;
     text-align: center;
 }
+
+textarea {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#console {
+    padding:10px; 
+    width:100%; 
+    background-color:black;
+    color:#E65C00; 
+}

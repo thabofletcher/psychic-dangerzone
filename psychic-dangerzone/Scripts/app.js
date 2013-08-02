@@ -24,7 +24,7 @@
     }
 
     var prompt = function () {
-        write("&gt;&gt;&gt;&nbsp;&#127;");
+        write("Ask the psychic danger zone:&nbsp;&#127;");
     }
 
     var backspace = function () {

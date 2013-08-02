@@ -43,7 +43,7 @@ namespace psychic_dangerzone.Controllers
                 }
             }
 
-            Response.Write(responseString);
+            Response.Write(Environment.NewLine + responseString + Environment.NewLine);
             return new HttpStatusCodeResult(200);
         }
     }
