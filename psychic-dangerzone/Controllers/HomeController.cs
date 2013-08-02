@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using AverageAmerican;
-using WolframAlpha.WrapperCore;
 using System.Net.Http;
 
 namespace psychic_dangerzone.Controllers
@@ -64,7 +63,7 @@ namespace psychic_dangerzone.Controllers
 
             //var consumer = new AverageAmerican< 
 
-            return View(responseString);
+            return View("Index", null, responseString);
         }
     }
 }
