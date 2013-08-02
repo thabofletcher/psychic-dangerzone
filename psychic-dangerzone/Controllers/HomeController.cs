@@ -65,5 +65,20 @@ namespace psychic_dangerzone.Controllers
 
             return View("Index", null, responseString);
         }
+
+        [HttpPost]
+        public ActionResult Console(string command)
+        {
+            var split = command.Split(' ');
+
+            if (split.Length <= 0)
+                return new HttpStatusCodeResult(404);
+
+            //Wolfram here
+            //TODO
+            Response.Write("Hello");
+
+            return new HttpStatusCodeResult(200);
+        }
     }
 }
