@@ -10,14 +10,19 @@
                 </div>
             </div>
         </div>
-        <button id="submit" type="submit" class="btn btn-inverse btn-large">Ask the psychic dangerzone</button>
+        <button id="submit" type="submit" class="btn btn-danger btn-large">Ask the psychic dangerzone</button>
     </form>
-    <div id="results-wrapper">
-        <div id="results-header">
-            <h2>Welcome to the dangerzone</h2>
+    @if (!string.IsNullOrEmpty(Model))
+    {
+    <center>
+        <div id="results-wrapper">
+            <div id="results-header">
+                <h2>Welcome to the dangerzone</h2>
+            </div>
+            <div id="results">
+                <p>@Model</p>
+            </div>
         </div>
-        <div id="results">
-            <p>@Model</p>
-        </div>
-    </div>
+    </center>
+    }
 </div>
